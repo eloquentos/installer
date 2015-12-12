@@ -19,7 +19,6 @@ app.on('ready', function() {
     mainWindow.loadURL('file://' + __dirname + '/index.html');
 
     mainWindow.maximize();
-    mainWindow.setFullScreen(true);
 
     // Emitted when the window is closed.
     mainWindow.on('closed', function() {
