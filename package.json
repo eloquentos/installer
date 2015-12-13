@@ -3,5 +3,8 @@
   "description": "The Eloquent OS installer",
   "license": "GPLv3",
   "version": "0.1.0",
-  "main": "main.js"
+  "main": "main.js",
+  "dependencies": {
+      "linux-blockutils": "file:./vendor/blockutils"
+  }
 }
