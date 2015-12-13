@@ -15,7 +15,9 @@ app.on('window-all-closed', function() {
 
 app.on('ready', function() {
     // Create the window.
-    mainWindow = new BrowserWindow;
+    mainWindow = new BrowserWindow({
+        resizable: false
+    });
 
     if (env == 'production') mainWindow.setMenu(null);
 
