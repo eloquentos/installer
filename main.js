@@ -1,3 +1,4 @@
+// Warning: This app will have the ability to do damage to your OS when not in development mode
 const env = 'development';
 
 const electron = require('electron');
