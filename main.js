@@ -49,14 +49,16 @@ app.on('ready', function() {
                 break;
             }
 
+            var exec = require('child_process').exec;
+
             if (response == 1) {
                 if (env == 'development') return console.log('reboot');
 
-                // Reboot logic here
+                exec('reboot now');
             } else if (response == 2) {
                 if (env == 'development') return console.log('shutdown');
 
-                // Shutdown logic here
+                exec('shutdown -h now');
             }
         });
     });
