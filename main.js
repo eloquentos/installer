@@ -1,6 +1,7 @@
 const env = 'development';
 
 const electron = require('electron');
+const dialog = require('dialog');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 
@@ -24,9 +25,39 @@ app.on('ready', function() {
     // and load the index.html of the app.
     mainWindow.loadURL('file://' + __dirname + '/views/index.html');
 
+    var quitting = false;
+
     // Emitted when the window is closed.
-    mainWindow.on('closed', function() {
-        // Free up some memory
-        mainWindow = null;
+    mainWindow.on('close', function(e) {
+        if (quitting) return true;
+
+        e.preventDefault();
+
+        dialog.showMessageBox(mainWindow, {
+            title: 'Are you sure you want to exit?',
+            message: 'Exiting the installer will stop any current install progress and could leave your computer unbootable.',
+            buttons: ['cancel', 'Reboot', 'Shutdown']
+        }, function (response) {
+            switch (response) {
+                case 0:
+                    return false;
+
+                case 1:
+                case 2:
+                    quitting = true;
+                    mainWindow.close();
+                break;
+            }
+
+            if (response == 1) {
+                if (env == 'development') return console.log('reboot');
+
+                // Reboot logic here
+            } else if (response == 2) {
+                if (env == 'development') return console.log('shutdown');
+
+                // Shutdown logic here
+            }
+        });
     });
 });
