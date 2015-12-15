@@ -16,13 +16,6 @@ $(function() {
     });
 
     $('#disk-util').click(function() {
-        remote.getCurrentWindow().hide();
-
-        var spawn = require('child_process').spawn;
-        var diskUtility = spawn('gnome-disks');
-
-        diskUtility.on('exit', function() {
-            remote.getCurrentWindow().show();
-        })
+        require('child_process').spawn('gnome-disks');
     });
 })
