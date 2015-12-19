@@ -5,7 +5,7 @@
   "authors": [
     "Nimbusoft Ltd <opensource@nimbusoft.co.uk>"
   ],
-  "license": "GPL3",
+  "license": "GPL-3.0",
   "homepage": "https://github.com/eloquentos/installer",
   "moduleType": [],
   "private": true,
