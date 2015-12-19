@@ -18,7 +18,7 @@ app.on('window-all-closed', function() {
 app.on('ready', function() {
     // Create the window.
     mainWindow = new BrowserWindow({
-        frame: false
+        frame: env === 'development'
     });
 
     mainWindow.maximize();
