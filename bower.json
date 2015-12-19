@@ -1,0 +1,19 @@
+{
+  "name": "eloquent-installer",
+  "description": "The Eloquent OS installer",
+  "main": "main.js",
+  "authors": [
+    "Nimbusoft Ltd <opensource@nimbusoft.co.uk>"
+  ],
+  "license": "GPL3",
+  "homepage": "https://github.com/eloquentos/installer",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
