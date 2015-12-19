@@ -1,15 +1,15 @@
 {
-    "name": "eloquent-installer",
-    "description": "The Eloquent OS installer",
-    "license": "GPL-3.0",
-    "version": "0.1.0",
-    "main": "main.js",
-    "dependencies": {
-        "linux-blockutils": "file:./vendor/blockutils"
-    },
-    "devDependencies": {
-        "bower": "^1.7.1",
-        "gulp": "^3.9.0",
-        "gulp-sass": "^2.1.1"
-    }
+  "name": "eloquent-installer",
+  "description": "The Eloquent OS installer",
+  "license": "GPL-3.0",
+  "version": "0.1.0",
+  "main": "main.js",
+  "dependencies": {
+    "linux-blockutils": "^0.1.0"
+  },
+  "devDependencies": {
+    "bower": "^1.7.1",
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.1.1"
+  }
 }
