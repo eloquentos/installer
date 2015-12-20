@@ -3,6 +3,8 @@ $(function() {
     const dialog = remote.require('dialog');
     const blk = remote.require('linux-blockutils');
 
+    $('.ladda-button').ladda('bind');
+
     blk.getBlockInfo({}, function(err,json) {
       if (err) {
           dialog.showErrorBox('An error occurred', 'Unable to list your disks');
