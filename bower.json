@@ -18,7 +18,9 @@
   ],
   "dependencies": {
     "jquery": "~2.1.4",
-    "ladda": "~0.9.8",
-    "bootstrap": "~3.3.6"
+    "bootstrap": "~3.3.6",
+    "angular": "~1.4.8",
+    "angular-route": "~1.4.8",
+    "angular-ladda": "~0.3.1"
   }
 }
