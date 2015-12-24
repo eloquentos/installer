@@ -1,21 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="installer">
     <head>
         <meta charset="utf-8">
 
         <title>Eloquent OS Installer</title>
 
-        {% block head %}
-            <!-- Bootstrap -->
-            <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-            <link href="../bower_components/ladda/dist/ladda.min.css" rel="stylesheet">
-            <link href="../assets/css/main.css" rel="stylesheet">
+        <!-- Bootstrap -->
+        <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../bower_components/ladda/dist/ladda.min.css" rel="stylesheet">
+        <link href="../assets/css/main.css" rel="stylesheet">
 
-            <!-- jQuery -->
-            <script>
-                window.$ = window.jQuery = require('../bower_components/jquery/dist/jquery.min.js');
-            </script>
-        {% endblock %}
+        <!-- Angular -->
+        <script src="../bower_components/angular/angular.js"></script>
+        <script src="../bower_components/angular-route/angular-route.js"></script>
+
+        <!-- jQuery -->
+        <script>
+            window.$ = window.jQuery = require('../bower_components/jquery/dist/jquery.min.js');
+        </script>
+
+        <!-- Bootstrap -->
+        <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!-- Ladda -->
+        <script src="../bower_components/ladda/dist/spin.min.js"></script>
+        <script src="../bower_components/ladda/dist/ladda.min.js"></script>
+        <script src="../bower_components/angular-ladda/dist/angular-ladda.min.js"></script>
+
+        <script src="../assets/app.js"></script>
+        <script src="../assets/controllers.js"></script>
     </head>
     <body>
         <div class="site-wrapper">
@@ -23,10 +36,8 @@
 
                 <div class="cover-container">
 
-                    <div class="inner cover">
-                        {% block content %}
-                            
-                        {% endblock %}
+                    <div class="inner cover" ng-view>
+
                     </div>
 
                 </div>
@@ -35,13 +46,5 @@
 
         </div>
 
-        {% block scripts %}
-            <!-- Bootstrap -->
-            <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-            <script src="../bower_components/ladda/dist/spin.min.js"></script>
-            <script src="../bower_components/ladda/dist/ladda.min.js"></script>
-            <script src="../bower_components/ladda/dist/ladda.jquery.min.js"></script>
-            <script src="../assets/js/app.js"></script>
-        {% endblock %}
     </body>
 </html>
