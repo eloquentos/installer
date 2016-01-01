@@ -1,5 +1,5 @@
-installerControllers.controller 'diskController', ['$scope', '$http',
-  ($scope, $http) ->
+installerControllers.controller 'diskController', ['$scope', '$http', 'shared',
+  ($scope, $http, shared) ->
     remote = require('remote')
     dialog = remote.require('dialog')
     blk = remote.require('linux-blockutils')
