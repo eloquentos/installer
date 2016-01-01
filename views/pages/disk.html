@@ -1,7 +1,7 @@
 <h1 class="cover-heading">Select Disk</h1>
 <p class="lead">Select the disk where you'd like Eloquent OS installed</p>
 <p class="lead">
-    <select class="form-control" ng-options="disk as disk.name for disk in disks track by disk.id" ng-model="selected">
+    <select class="form-control" ng-change="updateDisk()" ng-options="disk as disk.name for disk in disks track by disk.id" ng-model="selectedDisk">
         <option value="">Select a disk</option>
     </select>
 </p>

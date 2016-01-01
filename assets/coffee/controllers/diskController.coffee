@@ -16,5 +16,7 @@ installerControllers.controller 'diskController', ['$scope', '$http', 'shared',
             name: disk.MODEL
           return
         $scope.disks = disks
+        $scope.updateDisk = ->
+            shared.set 'selectedDisk', $scope.selectedDisk
       return
 ]
