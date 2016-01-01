@@ -7,4 +7,8 @@ installer.config ['$routeProvider', ($routeProvider) ->
         .when '/disk',
             templateUrl: './pages/disk.html'
             controller: 'diskController'
+
+        .when '/install',
+            templateUrl: './pages/install.html'
+            controller: 'installController'
 ]
