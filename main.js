@@ -26,7 +26,7 @@ app.on('ready', function() {
     if (env == 'production') mainWindow.setMenu(null);
 
     // and load the index.html of the app.
-    mainWindow.loadURL('file://' + __dirname + '/views/layout.html');
+    mainWindow.loadURL('file://' + __dirname + '/app/views/layout.html');
 
     var quitting = false;
 
