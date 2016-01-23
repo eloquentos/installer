@@ -5,7 +5,8 @@
   "version": "0.1.0",
   "main": "main.js",
   "dependencies": {
-    "linux-blockutils": "^0.1.0"
+    "linux-blockutils": "^0.1.0",
+    "request": "^2.67.0"
   },
   "devDependencies": {
     "bower": "^1.7.1",
