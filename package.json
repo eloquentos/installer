@@ -6,8 +6,9 @@
   "main": "main.js",
   "dependencies": {
     "linux-blockutils": "^0.1.0",
-    "request": "^2.67.0"
+    "webtorrent": "^0.78.1"
   },
+  "devDependencies":   },
   "devDependencies": {
     "bower": "^1.7.1",
     "gulp": "^3.9.0",
